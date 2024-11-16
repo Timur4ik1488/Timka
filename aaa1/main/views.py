@@ -3,10 +3,15 @@ from django.shortcuts import render
 
 def index(request):
     context: dict = {
-        'title': 'Home',
-        'content': 'Главная сраница магазина - Home',
+        'title': 'Home - Главная',
+        'content': 'Магазин мебели Home'
     }
     return render(request, 'main/index.html', context)
 
 def about(request):
-    return HttpResponse('About page')
+    context: dict = {
+        'title': 'Home - о нас',
+        'content': 'О нас',
+        'text_on_page': "Текст о том, какой это сасный магазин, а его директор просто пиздатый."
+    }
+    return render(request, 'main/about.html', context)
