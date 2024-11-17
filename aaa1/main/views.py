@@ -12,6 +12,6 @@ def about(request):
     context: dict = {
         'title': 'Home - о нас',
         'content': 'О нас',
-        'text_on_page': "Текст о том, какой это сасный магазин, а его директор просто пиздатый."
+        'text_on_page': "Текст о том, ккакой это хороий магазин "
     }
     return render(request, 'main/about.html', context)
